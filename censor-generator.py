@@ -36,7 +36,6 @@ def main():
     if len(args.url) is 0:
         parser.print_help()
         print('[error] Word list URL missing. Please provide a URL that serves a plaintext list.')
-        print('An example: http://www.bannedwordlist.com/lists/swearWords.txt')
         return
 
     # Print out the configuration that will be used, as a courtesy
