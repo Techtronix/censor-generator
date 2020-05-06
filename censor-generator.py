@@ -20,6 +20,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import argparse
 import requests
+import sys
 
 parser = argparse.ArgumentParser(
     description='Generate a censor.conf file for InspIRCd')
@@ -36,14 +37,13 @@ def main():
     # Check to see if a URL was provided. Bail if not.
     if len(args.url) == 0:
         parser.print_help()
-        print(
-            '[error] Word list URL missing. Please provide a URL that serves a plaintext list.')
+        print('Word list URL missing. Please provide a URL that serves a plaintext list.', file=sys.stderr)
         return
 
     # Fetch the specified URL
     response = requests.get(args.url)
     if response.status_code != 200:
-        print('[error] URL request did not return OK status')
+        print('URL request did not return OK status', file=sys.stderr)
         return
 
     # If no output file specified, print to stdout
