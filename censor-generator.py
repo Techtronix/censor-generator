@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 Generate a censor configuration for InspIRCd
 
-Copyright (c) 2020 Michael Hazell <michaelhazell@hotmail.com>
+Copyright (c) 2024 Michael Hazell <michaelhazell@hotmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
